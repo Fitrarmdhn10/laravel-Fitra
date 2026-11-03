@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PelangganController; // <-- Tambahkan baris ini
+use App\Http\Controllers\UserController; // <-- Tambahkan baris ini
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,3 +21,6 @@ Route::get('dashboard', [DashboardController::class, 'index'])
     ->name('dashboard');
 
 Route::resource('pelanggan', PelangganController::class);
+
+
+Route::resource('user', UserController::class);
